@@ -1,31 +1,14 @@
-Iptables-graph
+nftables-graph
 ======================
 
-Tools for iptables to generate call graph.
-
-Example Command
----------------------
-
-Generate iptables of your local linux in graphviz graph foramt.
-
-```
-$ sudo iptables-save | ./iptables-graph
-digraph {
-    graph [pad="0.5", nodesep="0.5", ranksep="2"];
-    node [shape=plain]
-    rankdir=LR;
-...
-```
+Tools for nftables to generate call graph.
 
 Test Command
 ---------------------
 
-Generate iptables graph to svg file.
+Generate nftables graph to svg file.
 
 ```
-$ cat example.txt | ./iptables-graph > a.dot
+$ cat example.txt | ./nftables-graph.py > a.dot
 $ dot -Tsvg a.dot -o a.svg
 ```
-
-### Example Graph
-![example.svg](https://raw.githubusercontent.com/AChingYo/iptables-graph/main/example.svg)
